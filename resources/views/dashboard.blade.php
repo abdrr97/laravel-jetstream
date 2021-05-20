@@ -23,14 +23,14 @@
                 </thead>
                 <tbody>
                     @foreach($users as $user)
-                        <tr class="border">
-                            <td class="text-left py-3 px-4">{{ $user->id }}</td>
-                            <td class="text-left px-4">{{ $user->name }}</td>
-                            <td class="text-left px-4">{{ $user->email }}</td>
-                            <td class="text-left text-sm text-gray-500 px-4">
-                                {{ \Carbon\Carbon::parse($user->created_at)->diffForhumans() }}
-                            </td>
-                        </tr>
+                    <tr class="border">
+                        <td class="text-left py-3 px-4">{{ $user->id }}</td>
+                        <td class="text-left px-4">{{ $user->name }}</td>
+                        <td class="text-left px-4">{{ $user->email }}</td>
+                        <td class="text-left text-sm text-gray-500 px-4">
+                            {{ \Carbon\Carbon::parse($user->created_at)->diffForhumans() }}
+                        </td>
+                    </tr>
                     @endforeach
 
                 </tbody>

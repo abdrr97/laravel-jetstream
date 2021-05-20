@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/contact/{id}',[ContactController::class,'index'])->name('contact');
+Route::get('/category/all',[CategoryController::class,'index'])->name('categies');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     $users = App\Models\User::all();
